@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Neurovisor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__wrap">
+      <a href="#" class="logo">
+        <img src="img/images/logo.png" alt="Logo">
+      </a>
+      <div class="header__person">
+        <p>Пирогов Н. И.</p>
+        <span>рентгенолог</span>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="wrapper">
+      <div class="content">
+        <div class="content__top">
+          <input type="file" id="file" class="content__round">
+          <label for="file" class="content__round content__round--load">Загрузить снимок</label>
+          <a href="#" class="content__round content__round--process">обработать снимок</a>
+        </div>
+        <div class="content__imgs">
+          <div class="content__field">
+            <figure class="content__img">
+              <img src="img/images/img-1.jpg" alt="Загрузить снимок">
+            </figure>
+            <a href="#" class="content__btn content__btn--edit" title="Редактировать"></a>
+            <a href="#" class="content__btn content__btn--zoom" title="Увеличить"></a>
+          </div>
+          <div class="content__field">
+            <figure class="content__img">
+              <img src="img/images/img-2.jpg" alt="обработать снимок">
+            </figure>
+            <a href="#" class="content__btn content__btn--ok" title="Подтвердить"></a>
+            <a href="#" class="content__btn content__btn--zoom" title="Увеличить"></a>
+          </div>
+        </div>
+        <div class="content__btns">
+          <a href="#" class="btn">добавить комментарий</a>
+          <div class="content__wrap">
+            <a href="#" class="btn">сохранить снимок в...</a>
+            <div class="content__drop">
+              <ul class="content__list">
+                <li><a href="#">В текущую историю болезни</a></li>
+                <li><a href="#">Найти пациента</a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="btn">Очистить</a>
+        </div>
+      </div>
+      
+      <div class="sidebar">
+        <button type="button" class="sidebar__btn" title="Показать/Скрыть"></button>
+        <div class="sidebar__wrap">
+          <form action="#" class="search">
+            <button type="submit" class="search__btn"></button>
+            <input type="text" class="search__input" placeholder="Поиск пациента...">
+          </form>
+          <div class="sidebar__person">
+            <p>Джигурда Н.Б.</p>
+            <span>27.03.1961 гр</span>
+          </div>
+        </div>
+        
+        <div class="history">
+          <p class="history__title">История снимков</p>
+          <div class="swiper-container history__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide history__slide">
+                <ul class="history__list">
+                  <li class="history__item">
+                    <a href="#" class="history__link">
+                      <figure class="history__img">
+                        <img src="img/images/img-1.jpg" alt="История снимков">
+                      </figure>
+                      <time datetime="2018-10-12">12.10.2018</time>
+                    </a>
+                  </li>
+                  <li class="history__item history__item--active">
+                    <a href="#" class="history__link">
+                      <figure class="history__img">
+                        <img src="img/images/img-1.jpg" alt="История снимков">
+                      </figure>
+                      <time datetime="2018-07-31">31.07.2018</time>
+                    </a>
+                  </li>
+                  <li class="history__item">
+                    <a href="#" class="history__link">
+                      <figure class="history__img">
+                        <img src="img/images/img-1.jpg" alt="История снимков">
+                      </figure>
+                      <time datetime="2018-04-17">17.04.2018</time>
+                    </a>
+                  </li>
+                  <li class="history__item">
+                    <a href="#" class="history__link">
+                      <figure class="history__img">
+                        <img src="img/images/img-1.jpg" alt="История снимков">
+                      </figure>
+                      <time datetime="2018-10-12">12.10.2018</time>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-scrollbar history__scrollbar"></div>
+          </div>
+        </div>
+        
+        <a data-fancybox data-src="#call" href="javascript:;" class="btn">История болезни</a>
+        <a href="#" class="btn">анализы</a>
+        <a href="#" class="btn">нормативы</a>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+  
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  
+  <!-- Scroll container -->
+  <script>
+    var swiper = new Swiper('.history__slider', {
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      freeMode: true,
+      scrollbar: {
+        el: '.history__scrollbar',
+      },
+      mousewheel: true,
+    });
+  </script>
+</body>
+</html>
