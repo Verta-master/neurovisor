@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="content__btns">
-          <a href="#" class="btn">добавить комментарий</a>
+          <a data-fancybox data-src="#reg" href="javascript:;" class="btn">добавить комментарий</a>
           <div class="content__wrap">
             <a href="#" class="btn">сохранить снимок в...</a>
             <div class="content__drop">
@@ -125,9 +125,39 @@
     </div>
   </main>
   
-  <!-- Modal window -->
+  <!-- Modal windows -->
   <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">История болезни</p>
+    <p class="modal__person">Джигурда Н.Б. 27.03.1961 гр</p>
+    <p>История болезни стория болезни стория болезни стория болезнистория болезнистория болезни сториявцвцв стория болезнистория болезнистория болезни сториявцвцв стория болезнистория болезнистория болезни сториявцвцв стория болезнистория болезнистория болезни сториявцвцв</p>
+    <div class="content__imgs">
+      <div class="content__field">
+        <figure class="content__img">
+          <img src="img/images/img-1.jpg" alt="Загрузить снимок">
+        </figure>
+      </div>
+      <div class="content__field">
+        <figure class="content__img">
+          <img src="img/images/img-2.jpg" alt="обработать снимок">
+        </figure>
+      </div>
+    </div>
+  </div>
   
+  <div style="display: none;" id="reg" class="reg">
+    <p class="modal__title">РЕГИСТРАЦИЯ</p>
+    <form action="#" class="reg__form">
+      <div class="reg__field reg__field--name">
+        <input type="text" class="reg__input" placeholder="Имя пользователя">
+      </div>
+      <div class="reg__field reg__field--password">
+        <input type="password" class="reg__input" placeholder="Пароль">
+      </div>
+      <button type="submit" class="reg__btn">Войти</button>
+      <input type="checkbox" id="checkbox" class="reg__checkbox" checked>
+      <label for="checkbox" class="reg__label">Запомнить</label>
+      <a href="#" class="reg__link">Забыли пароль?</a>
+    </form>
   </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
