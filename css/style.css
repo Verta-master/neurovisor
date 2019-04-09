@@ -758,6 +758,17 @@ button {
   padding: 30px;
   padding-top: 65px;
   background-color: #ebedf0;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.sidebar--hide {
+  width: 30px;
+  padding: 0;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.sidebar--hide .sidebar__wrap {
+  display: none;
 }
 .sidebar__btn {
   position: absolute;
